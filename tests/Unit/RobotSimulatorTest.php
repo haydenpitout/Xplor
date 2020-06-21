@@ -41,7 +41,7 @@ class RobotSimulatorTest extends TestCase
     public function testInvalidAxisPlacement()
     {
         $invalidX = [0.1, -1, 5, '1', null, true, false];
-        $invalidY = [0.1, -1, 5, '1', null, true, false];
+        $invalidY = [1.0, -3, 99, '4', null, true, false];
         $invalidXY = [[0, 5], [true, true], ['1', 0], [1.0, 4], [true, false], [null, false]];
 
         $simulator = new RobotSimulator();
@@ -57,5 +57,27 @@ class RobotSimulatorTest extends TestCase
         foreach ($invalidXY as $coordinate) {
             $this->assertFalse( $simulator->place( $coordinate[0], $coordinate[1], 'NORTH'));
         } 
+    }
+    
+    /**
+     * Test direction placements.
+     *
+     * @return void
+     */
+    public function testDirectionPlacement()
+    {
+        $valid = ['NORTH', 'SOUTH', 'EAST', 'WEST'];
+        $invalid = [null, true, false, 'north', ' NORTH', 'WEST '];
+
+        $simulator = new RobotSimulator();
+
+        foreach ($valid as $direction) {
+            $this->assertTrue( $simulator->place(1, 1, $direction));
+        }
+
+        foreach ($invalid as $direction) {
+            $this->assertFalse( $simulator->place(1, 1, $direction));
+        }
     }    
+    
 }

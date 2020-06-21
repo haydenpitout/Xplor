@@ -20,7 +20,7 @@ Route::get('/', function () {
     $simulator = new RobotSimulator();
 
     dd(
-        $simulator->place(0, 1, 'NORTH')
+        $simulator->place(-0, 1, 'NORTH')
     );
     
     //return view('welcome');
