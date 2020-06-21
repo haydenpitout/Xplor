@@ -8,7 +8,7 @@ use App\Support\RobotSimulator;
 class RobotSimulatorTest extends TestCase
 {
     /**
-     * Test valid X placements.
+     * Test valid X, Y placements.
      *
      * @return void
      */
@@ -32,4 +32,30 @@ class RobotSimulatorTest extends TestCase
             $this->assertTrue( $simulator->place( (int) $coordinate[0], (int) $coordinate[1], 'NORTH'));
         } 
     }
+
+    /**
+     * Test invalid X, Y placements.
+     *
+     * @return void
+     */
+    public function testInvalidAxisPlacement()
+    {
+        $invalidX = [0.1, -1, 5, '1', null, true, false];
+        $invalidY = [0.1, -1, 5, '1', null, true, false];
+        $invalidXY = [[0, 5], [true, true], ['1', 0], [1.0, 4], [true, false], [null, false]];
+
+        $simulator = new RobotSimulator();
+
+        foreach ($invalidX as $x) {
+            $this->assertFalse( $simulator->place($x, 1, 'NORTH'));
+        }
+
+        foreach ($invalidY as $y) {
+            $this->assertFalse( $simulator->place(1, $y, 'NORTH'));
+        }
+
+        foreach ($invalidXY as $coordinate) {
+            $this->assertFalse( $simulator->place( $coordinate[0], $coordinate[1], 'NORTH'));
+        } 
+    }    
 }
