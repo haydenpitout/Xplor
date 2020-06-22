@@ -43,6 +43,11 @@ return [
 
     'disks' => [
 
+        'xplor' => [
+            'driver' => 'local',
+            'root' => storage_path('app/xplor'),
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),

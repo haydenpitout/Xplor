@@ -13,15 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\Support\RobotSimulator;
+use App\Xplor\RobotSimulator;
 
 Route::get('/', function () {
     
+
     $simulator = new RobotSimulator();
 
-    dd(
-        $simulator->place(-0, 1, 'NORTH')
-    );
+    $simulator->place(0, 0, 'NORTH');
+    $simulator->move();
+    $simulator->move();
+    $simulator->move();
+    $simulator->move();
+    $simulator->right();
+    $simulator->move();
+    $simulator->move();
+    $simulator->right();
+    $simulator->move();
+    $simulator->left();
+    $simulator->move();
+
+
+    dd( $simulator->announce());
     
     //return view('welcome');
 });
