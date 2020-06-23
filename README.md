@@ -8,7 +8,7 @@ The application is a simulation of a toy robot moving on a square tabletop,
   of dimensions 5 units x 5 units.
 
 - The application is based on a vanilla Laravel setup
-- All outputs are stored in the `xplor` language file
+- All output messages are stored in the `xplor` language file
 - Basic tests are available to validate inputs/outputs
 - The application stores the robots movements to a .csv file on the `xplor` disk
 - With the robots coordinates stored to file, a game can be resumed at any point in time
