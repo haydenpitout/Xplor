@@ -90,4 +90,49 @@ class RobotSimulatorTest extends TestCase
             $this->assertTrue( $this->simulator->place(1, 1, $direction)['error']);
         }
     }
+
+    /**
+     * Run sample test, Example A.
+     *
+     * @return void
+     */
+    public function testExampleA()
+    {
+        $this->simulator->place(0, 0, 'NORTH');
+        $this->simulator->move();
+        $result = $this->simulator->announce();
+
+        $this->assertEquals([0,1,'NORTH'], array_values($result['data']));
+    }
+
+    /**
+     * Run sample test, Example B.
+     *
+     * @return void
+     */
+    public function testExampleB()
+    {
+        $this->simulator->place(0, 0, 'NORTH');
+        $this->simulator->left();
+        $result = $this->simulator->announce();
+
+        $this->assertEquals([0,0,'WEST'], array_values($result['data']));
+    }
+
+    /**
+     * Run sample test, Example C.
+     *
+     * @return void
+     */
+    public function testExampleC()
+    {
+        $this->simulator->place(1, 2, 'EAST');
+        $this->simulator->move();
+        $this->simulator->move();
+        $this->simulator->left();
+        $this->simulator->move();
+        $result = $this->simulator->announce();
+
+        $this->assertEquals([3,3,'NORTH'], array_values($result['data']));
+    }    
 }
