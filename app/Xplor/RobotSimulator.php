@@ -48,7 +48,7 @@ class RobotSimulator
         }
 
         return $this->error(
-            'Invalid placement coordinates provided!'
+            __('xplor.invalid_placement')
         );
     }
     
@@ -78,7 +78,7 @@ class RobotSimulator
                     }
                     else {
                         return $this->error(
-                            'Robot will fall off the Northern side of the tabletop!'
+                            __('xplor.fall_off_table', ['direction' => 'Northern'])
                         );
                     }
 
@@ -97,7 +97,7 @@ class RobotSimulator
                     }
                     else {
                         return $this->error(
-                            'Robot will fall off the Southern side of the tabletop!'
+                            __('xplor.fall_off_table', ['direction' => 'Southern'])
                         );
                     }
 
@@ -116,7 +116,7 @@ class RobotSimulator
                     }
                     else {
                         return $this->error(
-                            'Robot will fall off the Eastern side of the tabletop!'
+                            __('xplor.fall_off_table', ['direction' => 'Eastern'])
                         );
                     }
 
@@ -135,7 +135,7 @@ class RobotSimulator
                     }
                     else {
                         return $this->error(
-                            'Robot will fall off the Western side of the tabletop!'
+                            __('xplor.fall_off_table', ['direction' => 'Western'])
                         );
                     }
 
@@ -144,7 +144,7 @@ class RobotSimulator
         }
 
         return $this->error(
-            'Robot is not positioned on the tabletop!'
+            __('xplor.not_on_table')
         );
     }
 
@@ -186,7 +186,7 @@ class RobotSimulator
         }
 
         return $this->error(
-            'Robot is not positioned on the tabletop!'
+            __('xplor.not_on_table')
         );
     }
 
@@ -228,7 +228,7 @@ class RobotSimulator
         }
 
         return $this->error(
-            'Robot is not positioned on the tabletop!'
+            __('xplor.not_on_table')
         );
     }
 
@@ -248,7 +248,7 @@ class RobotSimulator
         }
 
         return $this->error(
-            'Robot is not positioned on the tabletop!'
+            __('xplor.not_on_table')
         );
     }
 
