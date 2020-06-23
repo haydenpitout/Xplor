@@ -10,19 +10,13 @@ The application is a simulation of a toy robot moving on a square tabletop,
 - The application is based on a vanilla Laravel setup
 - The application stores the robots movements to a .csv file
 - The robot can be controlled via Artisan commands
-
+```
     robot:place
     robot:move
     robot:left
     robot:right
     robot:announce
-
-    PLACE X,Y,F
-    MOVE
-    LEFT
-    RIGHT
-    REPORT
-
+```
 Requirements
 ------------------------
 
