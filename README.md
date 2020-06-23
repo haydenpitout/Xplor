@@ -17,6 +17,12 @@ The application is a simulation of a toy robot moving on a square tabletop,
     robot:right
     robot:announce
 
+    PLACE X,Y,F
+    MOVE
+    LEFT
+    RIGHT
+    REPORT
+
 Requirements
 ------------------------
 
