@@ -26,6 +26,27 @@ class RobotSimulator
     protected $validDirections = ['NORTH', 'SOUTH', 'EAST', 'WEST'];
 
     /**
+     * The path to the file where the robots movements are stored
+     *
+     * @var string
+     */    
+    protected $path = '';
+
+    /**
+     * Set the class up.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        if ( ! Storage::disk('xplor')->exists('movements.csv')) {
+            Storage::disk('xplor')->put('movements.csv', null);
+        }
+
+        $this->storagePath = Storage::disk('xplor')->path('/movements.csv');
+    }
+
+    /**
      * Place the robot on the table in position X, Y and facing DIRECTION.
      *
      * @return array
@@ -259,7 +280,7 @@ class RobotSimulator
      */     
     private function recordReset(array $position): array
     {
-        $writer = Writer::createFromPath( Storage::disk('xplor')->path('/movements.csv'), 'w+');
+        $writer = Writer::createFromPath($this->storagePath, 'w+');
         $writer->insertAll( [['x', 'y', 'direction'], $position]);
         
         return $this->currentLocation();
@@ -272,7 +293,7 @@ class RobotSimulator
      */    
     private function recordMovement(array $position): array
     {
-        $writer = Writer::createFromPath( Storage::disk('xplor')->path('/movements.csv'), 'a+');
+        $writer = Writer::createFromPath($this->storagePath, 'a+');
         $writer->insertOne($position);
 
         return $this->currentLocation();
@@ -287,7 +308,7 @@ class RobotSimulator
     {
         $row = [];
 
-        $reader = Reader::createFromPath( Storage::disk('xplor')->path('/movements.csv'), 'r');
+        $reader = Reader::createFromPath($this->storagePath, 'r');
         if ( count($reader) > 1) {
             $reader->setHeaderOffset(0);
             $row = $reader->fetchOne( count($reader) - 1);
