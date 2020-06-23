@@ -2,9 +2,20 @@ Toy Robot Simulator
 ===================
 
 Description
-------------------------
+-----------
 
-- The robot...
+The application is a simulation of a toy robot moving on a square tabletop,
+  of dimensions 5 units x 5 units.
+
+- The application is based on a vanilla Laravel setup
+- The application stores the robots movements to a .csv file
+- The robot can be controlled via Artisan commands
+
+    robot:place
+    robot:move
+    robot:left
+    robot:right
+    robot:announce
 
 Requirements
 ------------------------
