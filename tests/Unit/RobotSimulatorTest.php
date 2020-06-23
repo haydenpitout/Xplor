@@ -2,9 +2,9 @@
 
 namespace Tests\Unit;
 
+use App\Xplor\RobotSimulator;
 use Storage;
 use Tests\TestCase;
-use App\Xplor\RobotSimulator;
 
 class RobotSimulatorTest extends TestCase
 {
@@ -20,10 +20,10 @@ class RobotSimulatorTest extends TestCase
     public function tearDown(): void
     {
         Storage::fake('xplor')->delete('movements.csv');
-        
+
         parent::tearDown();
-    }    
-    
+    }
+
     /**
      * Test valid X, Y placements.
      *
@@ -36,16 +36,16 @@ class RobotSimulatorTest extends TestCase
         $validXY = ['00', '01', '20', '34', '44'];
 
         foreach ($validX as $x) {
-            $this->assertFalse( $this->simulator->place($x, 1, 'NORTH')['error']);
+            $this->assertFalse($this->simulator->place($x, 1, 'NORTH')['error']);
         }
 
         foreach ($validY as $y) {
-            $this->assertFalse( $this->simulator->place(1, $y, 'NORTH')['error']);
+            $this->assertFalse($this->simulator->place(1, $y, 'NORTH')['error']);
         }
 
         foreach ($validXY as $coordinate) {
-            $this->assertFalse( $this->simulator->place( (int) $coordinate[0], (int) $coordinate[1], 'NORTH')['error']);
-        } 
+            $this->assertFalse($this->simulator->place((int) $coordinate[0], (int) $coordinate[1], 'NORTH')['error']);
+        }
     }
 
     /**
@@ -60,18 +60,18 @@ class RobotSimulatorTest extends TestCase
         $invalidXY = [[0, 5], [true, true], ['1', 0], [1.0, 4], [true, false], [null, false]];
 
         foreach ($invalidX as $x) {
-            $this->assertTrue( $this->simulator->place($x, 1, 'NORTH')['error']);
+            $this->assertTrue($this->simulator->place($x, 1, 'NORTH')['error']);
         }
 
         foreach ($invalidY as $y) {
-            $this->assertTrue( $this->simulator->place(1, $y, 'NORTH')['error']);
+            $this->assertTrue($this->simulator->place(1, $y, 'NORTH')['error']);
         }
 
         foreach ($invalidXY as $coordinate) {
-            $this->assertTrue( $this->simulator->place( $coordinate[0], $coordinate[1], 'NORTH')['error']);
-        } 
+            $this->assertTrue($this->simulator->place($coordinate[0], $coordinate[1], 'NORTH')['error']);
+        }
     }
-    
+
     /**
      * Test direction placements.
      *
@@ -83,11 +83,11 @@ class RobotSimulatorTest extends TestCase
         $invalid = [null, true, false, 'north', ' NORTH', 'WEST '];
 
         foreach ($valid as $direction) {
-            $this->assertFalse( $this->simulator->place(1, 1, $direction)['error']);
+            $this->assertFalse($this->simulator->place(1, 1, $direction)['error']);
         }
 
         foreach ($invalid as $direction) {
-            $this->assertTrue( $this->simulator->place(1, 1, $direction)['error']);
+            $this->assertTrue($this->simulator->place(1, 1, $direction)['error']);
         }
     }
 
@@ -102,7 +102,7 @@ class RobotSimulatorTest extends TestCase
         $this->simulator->move();
         $result = $this->simulator->announce();
 
-        $this->assertEquals([0,1,'NORTH'], array_values($result['data']));
+        $this->assertEquals([0, 1, 'NORTH'], array_values($result['data']));
     }
 
     /**
@@ -116,7 +116,7 @@ class RobotSimulatorTest extends TestCase
         $this->simulator->left();
         $result = $this->simulator->announce();
 
-        $this->assertEquals([0,0,'WEST'], array_values($result['data']));
+        $this->assertEquals([0, 0, 'WEST'], array_values($result['data']));
     }
 
     /**
@@ -133,6 +133,6 @@ class RobotSimulatorTest extends TestCase
         $this->simulator->move();
         $result = $this->simulator->announce();
 
-        $this->assertEquals([3,3,'NORTH'], array_values($result['data']));
-    }    
+        $this->assertEquals([3, 3, 'NORTH'], array_values($result['data']));
+    }
 }
