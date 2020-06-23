@@ -23,7 +23,7 @@ robot:announce
 
 **Example: robot:place**
 ```
-php artisan robot:place 1 1 SOUTH
+php artisan robot:place 0 0 NORTH
 ```
 
 **Example: robot:move**
