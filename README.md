@@ -17,6 +17,32 @@ The application is a simulation of a toy robot moving on a square tabletop,
     robot:right
     robot:announce
 ```
+
+**Example: robot:place**
+```
+    php artisan robot:place 1 1 SOUTH
+```
+
+**Example: robot:move**
+```
+    php artisan robot:move
+```
+
+**Example: robot:left**
+```
+    php artisan robot:left
+```
+
+**Example: robot:right**
+```
+    php artisan robot:right
+```
+
+**Example: robot:announce**
+```
+    php artisan robot:announce
+```
+
 Requirements
 ------------------------
 
