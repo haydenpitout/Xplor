@@ -42,7 +42,7 @@ class RobotAnnounce extends Command
         $result = $simulator->announce();
 
         if ($result['error'] === false) {
-            $this->info('The current robots position is:');
+            $this->info('Houston, our current position is:');
             $this->table(['x', 'y', 'direction'], [$result['data']]);           
         }
         else {
