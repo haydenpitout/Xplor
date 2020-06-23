@@ -10,6 +10,9 @@ The application is a simulation of a toy robot moving on a square tabletop,
 - The application is based on a vanilla Laravel setup
 - The application stores the robots movements to a .csv file
 - The robot can be controlled via Artisan commands
+- The `robot:place` command resets the game
+- With the robots coordinates stored to file, a game can be resumed at any time
+
 ```
     robot:place
     robot:move
