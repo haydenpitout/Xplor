@@ -19,7 +19,7 @@ class RobotMove extends Command
      *
      * @var string
      */
-    protected $description = 'Move the robot in one space in the direction it is facing';
+    protected $description = 'Move the robot one space in the direction it is facing';
 
     /**
      * Create a new command instance.
