@@ -7,13 +7,13 @@ Description
 The application is a simulation of a toy robot moving on a square tabletop,
   of dimensions 5 units x 5 units.
 
-- The application is based on a vanilla Laravel setup
+- The application is based on a vanilla Laravel setup, see [Laravel.com](https://laravel.com/docs/7.x/installation)
 - All output messages are stored in the `xplor` language file
 - Basic tests are available to validate inputs/outputs
+- The robot is controlled via Artisan commands
 - The application stores the robots movements to a .csv file on the `xplor` disk
 - With the robots coordinates stored to file, a game can be resumed at any point in time
-- The robot is be controlled via Artisan commands
-- The `robot:place` command will reset the game
+- The `robot:place` Artisan command will start/reset the game
 
 ```
 robot:place
