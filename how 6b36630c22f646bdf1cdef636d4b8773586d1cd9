@@ -1,0 +1,149 @@
+[33mcommit 6b36630c22f646bdf1cdef636d4b8773586d1cd9[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Aug 18 11:11:55 2020 +1000
+
+    dont want this
+
+[33mcommit 21d54fba290e113d5dd4b6f344ca86e1da477998[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Wed Jun 24 10:51:56 2020 +1000
+
+    Typo fix
+
+[33mcommit f4f862fedbc4d2753f23ff040d36211539650d8a[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Wed Jun 24 10:48:11 2020 +1000
+
+    Fixed a typo and added a little more info
+
+[33mcommit 9329732f69e0f33690aaeaa8e1e8088e124782bb[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 16:20:58 2020 +1000
+
+    Added in custom loggin to enable better interaction, formatted the code
+
+[33mcommit e8d5d593b78ba8d565d5c7e31ec0926867cb9842[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 12:36:14 2020 +1000
+
+    Cleanup
+
+[33mcommit 3d5374bfc4d1ed2c5d400c252c30238fe978ba16[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 12:15:12 2020 +1000
+
+    Update to the artisan response message for consistency
+
+[33mcommit 7d972c93a804fba99b8124ca3f487e5a2f459074[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 11:58:12 2020 +1000
+
+    Readme update
+
+[33mcommit dad0594e6657a1cb4cc013e81947a333a192e56a[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 11:56:42 2020 +1000
+
+    Readme refinements
+
+[33mcommit 1793bff0e3a0da6994eea99df4b282c0dd2ad604[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 11:49:26 2020 +1000
+
+    Readme update
+
+[33mcommit 1793107bdda2c02e0150d9dfa480fd424eb59807[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 11:48:35 2020 +1000
+
+    Readme update
+
+[33mcommit 3e10158f0175d5eb6120e400b06d78d7bb465d2d[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 11:46:55 2020 +1000
+
+    Readme update
+
+[33mcommit a6b97f4f9a9c7b69159667717ee4ae2408d073d4[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 11:43:47 2020 +1000
+
+    Readme update, added example artisan commands
+
+[33mcommit dcd15c904845f68828cb783c2c96e368e1fcab2c[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 11:39:15 2020 +1000
+
+    Readme update
+
+[33mcommit a14862f37fb6ee38abe9df7fb19799ddf0bf9601[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 11:34:27 2020 +1000
+
+    Readme update
+
+[33mcommit 4ed0af41f538c1bcc225b8f837cbc3299721aa5c[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 11:30:34 2020 +1000
+
+    Readme update
+
+[33mcommit 90c4e70e4d4180055a91329e9aee6120e2356759[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 11:22:29 2020 +1000
+
+    Readme update
+
+[33mcommit 5064a7c49028ebe6feb222f9fce4d4d3dc0fd0ec[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 11:20:24 2020 +1000
+
+    Added a constructor to the class to set class properties and add flexability
+
+[33mcommit b6c4ee64c93b024fac8274875d30d30d2459a8b9[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 10:34:00 2020 +1000
+
+    Moved all the message outputs to a language file
+
+[33mcommit 5bafa842e54af966b899c99c85e3e74433dbb571[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 10:12:43 2020 +1000
+
+    Added in test cases to mirror the samples given in the brief
+
+[33mcommit 686781dd7643481963aa17be33b40852f04a7f83[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Tue Jun 23 09:54:34 2020 +1000
+
+    Built in the bulk of the functionality, and included artisan commands
+
+[33mcommit f133c893ed3bf49763ac21fced7f9ea2216ad66d[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Sun Jun 21 18:01:59 2020 +1000
+
+    Added in tests for DirectionPlacement
+
+[33mcommit 31e61e0f08a34a412db9c20f68e3e79246d1b0e6[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Sun Jun 21 17:51:01 2020 +1000
+
+    Added invalid placement tests
+
+[33mcommit beefcfbaf555e9a8575d843fabd4cfe311c3c516[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Sun Jun 21 17:40:54 2020 +1000
+
+    Added simulation class foundations and introduced the place method and initial test
+
+[33mcommit 074314ba8eb937311888ccd490c175deb0106f64[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Sun Jun 21 15:18:57 2020 +1000
+
+    Readme update, add in Toy Robot Simulator instructions for reference
+
+[33mcommit bd980ace4a2392b5a2c22d88758c00aa01410fc2[m
+Author: Hayden Pitout <haydenpitout@cnsdose.com>
+Date:   Sun Jun 21 15:11:32 2020 +1000
+
+    Initial commit

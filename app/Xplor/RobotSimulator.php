@@ -32,8 +32,6 @@ class RobotSimulator
      */
     protected $path = '';
 
-    // DONT WANT THIS
-
     /**
      * Initialise the class
      *
