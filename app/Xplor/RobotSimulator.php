@@ -46,6 +46,8 @@ class RobotSimulator
         $this->storagePath = Storage::disk('xplor')->path('movements.csv');
     }
 
+// remove me
+
     /**
      * Place the robot on the table in position X, Y and facing DIRECTION.
      *
